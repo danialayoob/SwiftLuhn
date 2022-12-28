@@ -6,13 +6,8 @@ let package = Package(
      products: [
         .library(name: "SwiftLuhn", targets: ["SwiftLuhn"])
     ],
-    dependencies: [],
     targets: [
-        .executableTarget(
-            name: "SwiftLuhn",
-            dependencies: []),
-        .testTarget(
-            name: "SwiftLuhnTests",
-            dependencies: ["SwiftLuhn"]),
+        .target(name: "SwiftLuhn", dependencies: []),
+        .testTarget(name: "SwiftLuhn_Tests", dependencies: ["SwiftLuhn"])
     ]
 )
